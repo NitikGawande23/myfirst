@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  height=device-height">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://images.unsplash.com/photo-1457269449834-928af64c684d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80)  ;
+            background-size: cover;
+            background-repeat: repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 15%;
+            
+            
+        }
+        div{
+            background-image: linear-gradient(rgba(72, 145, 213, 0.473),rgba(140, 206, 228, 0.511), rgba(186, 238, 234, 0.322));
+            color: rgb(9, 37, 35);
+            border-radius: 6px;
+            padding: 1.5rem;
+            box-shadow: 0 0 40px;
+        }
+        h2{
+           text-align: center;
+           font-size: 2rem;
+        }
+        button{
+            color: rgb(14, 106, 142);
+            background-color: rgb(182, 208, 231);
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            padding: 6px;
+            border: 3px rgb(14, 106, 142) solid;
+            display: block;
+            margin-bottom: 2rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        button:hover{
+            color: aliceblue;
+            background-color: rgb(14, 106, 142);
+            transition: 0.3s;
+        }
+        h1{
+            font-family:monospace;
+            font-size: 3rem;
+        }
+        h3{
+            font-family:monospace;
+            
+        }
+
+    </style>
+    
+        
+    
+</head>
+<body>
+    <script src="myfirst.js"></script>
+    <div>
+    <h1 >THE COUNT APP</h1>
+    <h2 id="number">0</h2>
+    <button onclick="increment()" >INCREMENT</button>
+    <button onclick="save()">&nbsp; &nbsp; SAVE &nbsp; &nbsp;</button>
+    <h3 id="total">PREVIOUS TOTAL:</h3>
+    </div>
+    <script>
+       var num=0;
+    //    var total= document.getElementById("number").innerText
+       function increment(){
+        num= num+1;
+        document.getElementById("number").innerText=num;
+
+
+       }
+       var tap= document.getElementById("total")
+       function save(){
+
+         tap.innerText +=  document.getElementById("number").innerText + " - " 
+         document.getElementById("number").innerText=0;
+         num=0;
+        
+
+       }
+    </script>
+</body>
+</html>
